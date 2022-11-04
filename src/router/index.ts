@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import Shop from "../views/ShopPage/ShopPage.vue";
-import About from "../views/AboutPage/AboutPage.vue";
+import ShopPage from "@/views/ShopPage/ShopPage.vue";
+import AboutPage from "@/views/AboutPage/AboutPage.vue";
 
 Vue.use(VueRouter);
 
@@ -19,7 +19,7 @@ const routes: Array<RouteConfig> = [
   {
     path: "/about",
     name: "about",
-    component: About,
+    component: AboutPage,
   },
 ];
 

@@ -6,4 +6,4 @@
 
 <script lang="ts" src="./AboutPage.ts" />
 
-<style src="AboutPage.css" />
+<style src="./AboutPage.css" />
