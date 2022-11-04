@@ -1,14 +1,25 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import Shop from "../views/ShopPage/ShopPage.vue";
+import About from "../views/AboutPage/AboutPage.vue";
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
     path: "/",
-    name: "home",
-    component: HomeView,
+    name: "shop",
+    component: Shop,
+  },
+  {
+    path: "/shop",
+    name: "shop",
+    component: Shop,
+  },
+  {
+    path: "/about",
+    name: "about",
+    component: About,
   },
 ];
 
