@@ -9,12 +9,12 @@ const routes: Array<RouteConfig> = [
   {
     path: "/",
     name: "shop",
-    component: Shop,
+    component: ShopPage,
   },
   {
     path: "/shop",
     name: "shop",
-    component: Shop,
+    component: ShopPage,
   },
   {
     path: "/about",

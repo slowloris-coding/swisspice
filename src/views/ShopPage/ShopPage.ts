@@ -1,5 +1,5 @@
 import { Component, Vue } from "vue-property-decorator";
-import SiteFillerContent from "@/components/SiteFillerContent/SiteFillerContent.vue";
+import SiteFillerContent from "@/components/SiteFillerContent/SiteFillerContent";
 
 @Component
 export default class ShopPage extends Vue {

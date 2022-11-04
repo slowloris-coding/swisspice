@@ -4,6 +4,6 @@
   </div>
 </template>
 
-<script lang="ts" src="AboutPage.ts" />
+<script lang="ts" src="./AboutPage.ts" />
 
 <style src="AboutPage.css" />

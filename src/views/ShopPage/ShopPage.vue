@@ -4,21 +4,5 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import SiteFillerContent from "@/components/SiteFillerContent/SiteFillerContent.vue";
-
-@Component
-export default class ShopPage extends Vue {
-  name = "shop";
-  components = {
-    SiteFillerContent,
-  };
-}
-</script>
-
-<style>
-* {
-  font-family: var(--font-fam);
-}
-</style>
+<script lang="ts" src="./ShopPage.ts"></script>
+<style src="./ShopPage.css"></style>

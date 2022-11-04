@@ -15,9 +15,7 @@
       <div
         class="NavElement"
         :class="
-          $route.path === '/shop' || $route.path === '/'
-            ? 'current_route_nav'
-            : 'inactive_route_nav'
+          $route.path === '/shop' ? 'current_route_nav' : 'inactive_route_nav'
         "
         id="Nav_Shop"
         @click="gotoLocation('http://localhost:8080/#/shop')"
