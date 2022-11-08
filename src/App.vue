@@ -1,47 +1,78 @@
 <template>
-  <div id="App">
-    <NavBar />
-    <router-view></router-view>
-  </div>
-</template>
+  <v-app>
+    <v-app-bar app prominent shrink-on-scroll color="normal">
+      <v-img contain class="logo" src="@/assets/logo/logo_long.svg"></v-img>
+      <v-spacer></v-spacer>
+      <v-tabs
+        class="menu_tabs"
+        slider-color="primary"
+        slider-size="3"
+        :hide-slider="activePage === 'profile'"
+        icons-and-text
+        show-arrows
+      >
+        <v-tab to="home" class="menu_tab" @change="activePage = 'home'">
+          <span v-if="activePage === 'home'">Home</span>
+          <v-icon v-else>mdi-home</v-icon>
+        </v-tab>
+        <v-tab to="shop" class="menu_tab" @change="activePage = 'shop'">
+          <span v-if="activePage === 'shop'">Shop</span>
+          <v-icon v-else>mdi-store</v-icon>
+        </v-tab>
+        <v-tab to="about" class="menu_tab" @change="activePage = 'about'">
+          <span v-if="activePage === 'about'">About</span>
+          <v-icon v-else>mdi-book-open-variant</v-icon>
+        </v-tab>
+      </v-tabs>
 
+      <v-spacer></v-spacer>
+
+      <v-btn
+        icon
+        style="align-self: flex-end; justify-self: flex-end"
+        :color="
+          (() => {
+            return activePage === 'profile' ? 'primary' : 'normal';
+          })()
+        "
+        @click="activePage = 'profile'"
+        to="profile"
+      >
+        <v-icon x-large>mdi-account-circle</v-icon>
+      </v-btn>
+    </v-app-bar>
+
+    <v-main>
+      <router-view />
+    </v-main>
+  </v-app>
+</template>
 <script lang="ts">
 import Vue from "vue";
-import NavBar from "@/components/Navigation/NavBar/NavBar.vue";
+import { Component } from "vue-property-decorator";
 
-export default Vue.extend({
+@Component({
   name: "App",
-  components: {
-    NavBar,
-  },
-  data: () => ({
-    //
-  }),
-});
+})
+export default class App extends Vue {
+  activePage = "home";
+}
 </script>
 
 <style>
-:root {
-  --font-fam: Verdana;
+.logo {
+  height: 100%;
+  width: 10%;
 }
 
-* {
-  font-family: var(--font-fam);
+.menu_tabs {
+  height: 50%;
+  width: 50%;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-#App {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
+.menu_tab {
+  height: 50%;
+  width: 15%;
+  align-self: flex-end;
 }
 </style>

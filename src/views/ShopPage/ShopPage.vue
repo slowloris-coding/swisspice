@@ -1,7 +1,5 @@
 <template>
-  <div class="shop">
-    <SiteFillerContent site_tag="ShopPage" />
-  </div>
+  <v-container id="ShopPage"><ProductCard item_name="Salz" /></v-container>
 </template>
 
 <script lang="ts" src="./ShopPage.ts"></script>

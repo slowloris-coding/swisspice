@@ -1,0 +1,30 @@
+* {
+    font-family: Verdana;
+}
+
+html { overflow-y: auto }
+
+#HomePage {
+    min-height: 100%;
+    min-width: 100%;
+    background: url('~@/assets/HomePage/matterhorn_sunrise.jpg') no-repeat center center;
+    background-size: cover;
+    background-blend-mode: darken;
+    background-color: rgba(20,30,40,60%);
+}
+
+#tagline_quote {
+    color: white;
+    padding: 5vh 5vw;
+    width: 100vw;
+    height: fit-content;
+}
+
+#site_cards {
+    margin-top: 10vh;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-content: space-around;
+}
+

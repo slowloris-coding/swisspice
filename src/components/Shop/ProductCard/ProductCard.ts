@@ -2,9 +2,9 @@ import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
 
 @Component({
-  name: "ShortLogo",
+  name: "ProductCard",
   components: {},
 })
-export default class ShortLogo extends Vue {
-  @Prop() img_width!: number;
+export default class ProductCard extends Vue {
+  @Prop() item_name!: string;
 }

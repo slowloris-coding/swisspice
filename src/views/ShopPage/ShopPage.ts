@@ -1,10 +1,10 @@
 import { Component, Vue } from "vue-property-decorator";
-import SiteFillerContent from "@/components/SiteFillerContent/SiteFillerContent";
+import ProductCard from "@/components/Shop/ProductCard/ProductCard.vue";
 
-@Component
-export default class ShopPage extends Vue {
-  name = "ShopPage";
-  components = {
-    SiteFillerContent,
-  };
-}
+@Component({
+  name: "ShopPage",
+  components: {
+    ProductCard,
+  },
+})
+export default class ShopPage extends Vue {}
