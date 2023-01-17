@@ -45,7 +45,7 @@
     text-align: center;
 }
 
-#emp_profiles {
+/*#emp_profiles {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -60,7 +60,7 @@
     min-width: fit-content;
     min-height: fit-content;
     margin: 0 1vw;
-}
+}*/
 
 #agb_container {
     margin: 4vh 0;

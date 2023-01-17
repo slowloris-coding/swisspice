@@ -424,7 +424,7 @@
       </v-container>
     </v-container>
 
-    <v-container id="emp_profiles">
+    <!--<v-container id="emp_profiles">
       <EmployeeProfile
         image="default_avatar.png"
         emp_name="Loris Kampus"
@@ -450,7 +450,7 @@
         emp_name="Luca Blatter"
         emp_position="CAO"
       />
-    </v-container>
+    </v-container>-->
   </v-container>
 </template>
 

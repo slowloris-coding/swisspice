@@ -9,7 +9,7 @@ import SiteCard from "@/components/HomePage/SiteCard/SiteCard.vue";
   },
 })
 export default class HomePage extends Vue {
-  tagLineQuote = '"So schmöckt d Schwiiz"';
+  hover_card = "none";
 
   maintenance = false;
   beforeMount() {
