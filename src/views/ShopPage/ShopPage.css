@@ -2,5 +2,10 @@
     font-family: Verdana;
 }
 
+html { overflow-y: auto }
+
 #ShopPage {
+    padding: 0;
+    min-height: 100%;
+    min-width: 100%;
 }

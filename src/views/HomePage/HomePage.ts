@@ -10,4 +10,11 @@ import SiteCard from "@/components/HomePage/SiteCard/SiteCard.vue";
 })
 export default class HomePage extends Vue {
   tagLineQuote = '"So schmöckt d Schwiiz"';
+
+  maintenance = false;
+  beforeMount() {
+    if (this.maintenance) {
+      this.$router.push({ name: "maintenance" });
+    }
+  }
 }

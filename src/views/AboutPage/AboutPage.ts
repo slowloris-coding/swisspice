@@ -1,6 +1,18 @@
 import { Component, Vue } from "vue-property-decorator";
+import EmployeeProfile from "@/components/EmployeeProfile/EmployeeProfile.vue";
 
-@Component
+@Component({
+  name: "about",
+  components: {
+    EmployeeProfile,
+  },
+})
 export default class AboutPage extends Vue {
-  name = "about";
+  maintenance = false;
+  dialog = false;
+  beforeMount() {
+    if (this.maintenance) {
+      this.$router.push({ name: "maintenance" });
+    }
+  }
 }

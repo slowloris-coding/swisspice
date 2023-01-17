@@ -7,4 +7,11 @@ import ProductCard from "@/components/Shop/ProductCard/ProductCard.vue";
     ProductCard,
   },
 })
-export default class ShopPage extends Vue {}
+export default class ShopPage extends Vue {
+  maintenance = true;
+  beforeMount() {
+    if (this.maintenance) {
+      this.$router.push({ name: "maintenance" });
+    }
+  }
+}

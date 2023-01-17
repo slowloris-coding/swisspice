@@ -7,20 +7,22 @@
         class="menu_tabs"
         slider-color="primary"
         slider-size="3"
-        :hide-slider="activePage === 'profile'"
+        :hide-slider="
+          $route.name === 'profile' || $route.name === 'maintenance'
+        "
         icons-and-text
         show-arrows
       >
-        <v-tab to="home" class="menu_tab" @change="activePage = 'home'">
-          <span v-if="activePage === 'home'">Home</span>
+        <v-tab to="home" class="menu_tab">
+          <span v-if="$route.name === 'home'">Home</span>
           <v-icon v-else>mdi-home</v-icon>
         </v-tab>
-        <v-tab to="shop" class="menu_tab" @change="activePage = 'shop'">
-          <span v-if="activePage === 'shop'">Shop</span>
+        <v-tab to="shop" class="menu_tab">
+          <span v-if="$route.name === 'shop'">Shop</span>
           <v-icon v-else>mdi-store</v-icon>
         </v-tab>
-        <v-tab to="about" class="menu_tab" @change="activePage = 'about'">
-          <span v-if="activePage === 'about'">About</span>
+        <v-tab to="about" class="menu_tab">
+          <span v-if="$route.name === 'about'">About</span>
           <v-icon v-else>mdi-book-open-variant</v-icon>
         </v-tab>
       </v-tabs>
@@ -28,17 +30,31 @@
       <v-spacer></v-spacer>
 
       <v-btn
-        icon
-        style="align-self: flex-end; justify-self: flex-end"
+        fab
+        elevation="4"
+        style="
+          align-self: flex-end;
+          justify-self: flex-end;
+          transform: scale(0.75);
+        "
         :color="
           (() => {
-            return activePage === 'profile' ? 'primary' : 'normal';
+            return $route.name === 'profile' ? 'primary' : '#FFF';
           })()
         "
-        @click="activePage = 'profile'"
         to="profile"
+        @mouseenter="
+          (event) => {
+            event.target.style.backgroundColor = '#FF0C1A55';
+          }
+        "
+        @mouseleave="
+          (event) => {
+            event.target.style.backgroundColor = '#FFF';
+          }
+        "
       >
-        <v-icon x-large>mdi-account-circle</v-icon>
+        <v-icon x-large>mdi-account</v-icon>
       </v-btn>
     </v-app-bar>
 
@@ -54,9 +70,7 @@ import { Component } from "vue-property-decorator";
 @Component({
   name: "App",
 })
-export default class App extends Vue {
-  activePage = "home";
-}
+export default class App extends Vue {}
 </script>
 
 <style>

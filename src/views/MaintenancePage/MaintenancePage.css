@@ -1,0 +1,55 @@
+* {
+    font-family: Verdana;
+}
+
+html { overflow-y: auto }
+
+#MaintenancePage {
+    padding: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#sparkline_graphic {
+    transform: rotate(180deg);
+    min-height: 70vh;
+    min-width: 100vw;
+    margin-bottom: -70vh;
+    z-index: -1;
+}
+
+#text_card {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    color: black;
+    z-index: 1;
+    background-color: #00000000;
+}
+
+#text_msg {
+    font-weight: bolder;
+    padding: 2vh 2vw;
+}
+
+@keyframes rotateGear {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#large_gear {
+    animation: 5s rotateGear infinite linear;
+}
+
+#small_gear {
+    animation: 5s rotateGear infinite linear reverse;
+}

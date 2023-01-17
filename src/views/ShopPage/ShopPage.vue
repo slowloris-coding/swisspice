@@ -1,5 +1,5 @@
 <template>
-  <v-container id="ShopPage"><ProductCard item_name="Salz" /></v-container>
+  <v-container id="ShopPage"> </v-container>
 </template>
 
 <script lang="ts" src="./ShopPage.ts"></script>
