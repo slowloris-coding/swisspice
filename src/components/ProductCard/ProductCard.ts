@@ -6,5 +6,10 @@ import { Component, Prop } from "vue-property-decorator";
   components: {},
 })
 export default class ProductCard extends Vue {
-  @Prop() item_name!: string;
+  @Prop() itm_obj!: any;
+  @Prop() expand = false;
+
+  img64Vars = {
+    "--p-img": this.itm_obj.img64,
+  };
 }

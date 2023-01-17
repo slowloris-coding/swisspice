@@ -1,0 +1,16 @@
+#ProductCard {
+    min-width: 25vw;
+    max-width: 25vw;
+    min-height: 30vh;
+    max-height: fit-content;
+    margin: 2vh 1vw;
+}
+
+#p_txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: fit-content;
+    max-width: 100%;
+}
