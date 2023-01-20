@@ -10,7 +10,7 @@ import VueAxios from "vue-axios";
   },
 })
 export default class ShopPage extends Vue {
-  api_url = "http://192.168.0.206:8888";
+  api_url = "http://10.45.116.56:8888";
   product_itms: Array<object> = [];
   maintenance = false;
   beforeMount() {
@@ -18,8 +18,8 @@ export default class ShopPage extends Vue {
       this.$router.push({ name: "maintenance" });
     } else {
       axios.get(`${this.api_url}/product/all`).then((response) => {
-        if (response.data.length > 0) {
-          response.data.forEach((e: object) => {
+        if (response.data.items.length > 0) {
+          response.data.items.forEach((e: object) => {
             this.product_itms.push(e);
           });
         }

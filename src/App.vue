@@ -1,7 +1,12 @@
 <template>
   <v-app>
     <v-app-bar app prominent shrink-on-scroll color="normal">
-      <v-img contain class="logo" src="@/assets/logo/logo_long.svg"></v-img>
+      <v-img
+        contain
+        class="logo"
+        src="@/assets/logo/logo_long.svg"
+        to="home"
+      ></v-img>
       <v-spacer></v-spacer>
       <v-tabs
         class="menu_tabs"

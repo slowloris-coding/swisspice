@@ -44,9 +44,7 @@
       <div class="text-center">
         <v-dialog v-model="dialog" width="80vw">
           <template v-slot:activator="{ on, attrs }">
-            <v-btn color="primary" dark v-bind="attrs" v-on="on">
-              view AGB
-            </v-btn>
+            <v-btn color="primary" dark v-bind="attrs" v-on="on">AGB</v-btn>
           </template>
 
           <v-card>
